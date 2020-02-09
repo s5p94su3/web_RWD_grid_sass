@@ -1,0 +1,63 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 微軟正黑體;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#banner {
+  height: 100vh;
+  background-image: url(./img/banner.jpg);
+  background-size: cover;
+  margin-top: -100px;
+}
+
+nav {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 150px auto;
+      grid-template-columns: auto 150px auto;
+  text-align: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 100px;
+  max-width: 1200px;
+  margin: 0 auto;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ee8f22;
+  padding: 15px;
+}
+
+nav ul li:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+nav img {
+  width: 80px;
+}
+
+nav img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 微軟正黑體;
+    box-sizing: border-box;
+}
+#banner{
+    height: 100vh;
+    background-image: url(./img/banner.jpg);
+    background-size: cover;
+    margin-top: -100px;
+}
+nav{
+    display: grid;
+    grid-template-columns: auto 150px auto;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    height: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    transition: 1.5s;
+    // 使用格線可讓內容垂直對齊
+    align-items: center;
+    ul{
+        list-style: none;
+        li{
+            display: inline-block;
+            a{
+                text-decoration: none;
+                color: rgb(238, 143, 34);
+                padding: 15px;
+            }
+            &:hover{
+                transform: scale(1.3);
+            }
+        }
+    }
+    img{
+        width: 80px;
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+}
