@@ -1,3 +1,6 @@
+$text-color:#333;
+$bg-color:#F8F9FA;
+
 *{
     padding: 0;
     margin: 0;
@@ -27,11 +30,11 @@
 nav{
     display: grid;
     grid-template-columns: auto 150px auto;
-    background-color:cadetblue;
+    background-color: rgba($color: rgb(0, 183, 255), $alpha: 0.7);
     text-align: center;
     position: sticky;
     top: 0;
-    height: 100px;
+    height: 80px;
     max-width: 1200px;
     margin: 0 auto;
     transition: 1.5s;
@@ -41,6 +44,7 @@ nav{
         list-style: none;
         li{
             display: inline-block;
+            
             a{
                 text-decoration: none;
                 color: rgb(238, 143, 34);
@@ -68,7 +72,7 @@ nav{
     *{
         color: black;
     }
-    // 格線區域名稱:自行命名
+    // 格線區域名稱:自行命名(要顯示白色的字)
     .pic{
         grid-area: pic;
     }
@@ -76,23 +80,26 @@ nav{
         grid-area: text-area;
         display: grid;
         align-items: center;
-        padding: 20px;
+        padding: 20px 0;
         h2{
-            padding: 15px;
+            padding: 15px 0;
         }
         p{
             line-height: 1.8;
+            // 字高
             margin-bottom: 40px;
         }
         a{
+            border: 2px solid black;
             text-decoration: none;
-            padding: 10px 30px;
+            // 去除底線
+            padding: 10px 15px;
             border-radius: 30px;
             transition: 0.8s;
 
             &:hover{
-                background-color: #fff;
-                color: aqua;
+                background-color: aqua;
+                color:black;
             }
         }
         
@@ -103,4 +110,32 @@ nav{
 }
 #content-2{
     grid-template-areas: "text-area pic"
+}
+// 圖示
+#icon{
+    background-color:$bg-color;
+    *{
+        color: $text-color;
+    }
+    div{
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+
+        div{
+            display: block;
+            text-align: center;
+
+            img{
+                display: block;
+                width: 60px;
+            }
+            span{
+                display: block;
+                padding: 15px 0;
+                font-size: 16px;
+            }
+        }
+    }
 }
