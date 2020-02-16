@@ -106,7 +106,6 @@ nav img:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 20px 0;
 }
 
 .content .text-area h2 {
@@ -132,7 +131,8 @@ nav img:hover {
   color: black;
 }
 
-#content-1, #content-3 {
+#content-1,
+#content-3 {
       grid-template-areas: "pic text-area";
 }
 
@@ -141,11 +141,17 @@ nav img:hover {
 }
 
 #icon {
-  background-color: #F8F9FA;
+  background-color: #f8f9fa;
 }
 
 #icon * {
   color: #333;
+}
+
+#icon h1 {
+  font-size: 50px;
+  text-align: center;
+  padding: 10px 0;
 }
 
 #icon div {
@@ -171,5 +177,110 @@ nav img:hover {
   display: block;
   padding: 15px 0;
   font-size: 16px;
+}
+
+#icon div div:hover span {
+  -webkit-filter: invert(15%) sepia(94%) saturate(1538%) hue-rotate(191deg) brightness(94%) contrast(103%);
+          filter: invert(15%) sepia(94%) saturate(1538%) hue-rotate(191deg) brightness(94%) contrast(103%);
+}
+
+footer {
+  padding: 0 auto;
+}
+
+footer img {
+  width: 100px;
+}
+
+footer p {
+  color: #333;
+  font-size: 15px;
+}
+
+#menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#menu a.current {
+  background-color: #003b74;
+  display: inline-block;
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-align: center;
+  color: #333 !important;
+}
+
+#menu img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+#menu:active #menu-box {
+  right: 0;
+}
+
+#menu:hover #menu-box {
+  right: 0;
+}
+
+#menu #menu-box {
+  position: absolute;
+  right: -500px;
+  top: 0;
+  width: 500px;
+  height: 100vh;
+  background-color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#menu #menu-box ul {
+  list-style: none;
+}
+
+#menu #menu-box ul li {
+  padding: 30px;
+}
+
+#menu #menu-box ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 36px;
+}
+
+@media screen and (min-width: 769px) {
+  nav {
+    -ms-grid-columns: (auto)[1];
+        grid-template-columns: repeat(1, auto);
+  }
+  nav ul {
+    display: none;
+  }
+  #meun {
+    display: block;
+  }
+  #content-1, #content-2, #content-3 {
+        grid-template-areas: "text-area" "pic";
+  }
+  #content-1 .text-area, #content-2 .text-area, #content-3 .text-area {
+    padding: 0 100px;
+  }
+  #content-1 .pic, #content-2 .pic, #content-3 .pic {
+    text-align: center;
+  }
+  #meun {
+    display: block;
+  }
+  #icon div {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    padding: 50px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
